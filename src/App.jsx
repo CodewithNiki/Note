@@ -1,5 +1,5 @@
-import NoteCreate from "./Components/NoteCreate";
-import NoteList from "./Components/NoteList";
+import NoteCreate from "./components/NoteCreate";
+import NoteList from "./components/NoteList";
 import { useState, useContext, useEffect } from "react";
 import ProviderContext from "./context/NoteProvider";
 
@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() =>{
     fetchNotes();
-  }, [])
+  }, [fetchNotes])
 
   const [isOpen, setIsOpen] = useState(false);
 

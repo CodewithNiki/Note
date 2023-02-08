@@ -1,13 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useCallback } from "react";
 import axios from "axios";
 
 const ProviderContext = createContext();
 
 const NoteProvider = ({children}) =>{
-    const fetchNotes = async () => {
+    const fetchNotes = useCallback(async () => {
         const response = await axios.get("http://localhost:3002/notes");
         setNotes(response.data)
-    }
+    }, [])
 
     const [notes, setNotes] = useState([]);
     
