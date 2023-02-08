@@ -1,0 +1,29 @@
+#Get all books
+GET http://localhost:3002/notes HTTP/1.1
+Content-Type: application/json
+
+###
+
+#Create a note
+POST http://localhost:3002/notes HTTP/1.1
+Content-Type: application/json
+
+{
+    "note": "Harry Potter"
+}
+
+###
+
+#Update a note
+PUT http://localhost:3002/notes/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "note": "Dark tower"
+}
+
+###
+
+#Delete a note
+DELETE http://localhost:3002/notes/1 HTTP/1.1
+Content-Type: application/json
