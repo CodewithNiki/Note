@@ -20,8 +20,7 @@ function App() {
       setIsOpen(false)
     }
 
-    return isOpen ? <NoteCreate onClick={handleClickClose}/>
-                  : <NoteList onClick={handleClickOpen}/>
+    return isOpen ? <NoteCreate onClick={handleClickClose}/> : <NoteList onClick={handleClickOpen}/>
 }
 
 export default App;
