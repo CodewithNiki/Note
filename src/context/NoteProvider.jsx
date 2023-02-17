@@ -9,8 +9,7 @@ const NoteProvider = ({children}) =>{
         setNotes(response.data)
     }, [])
 
-    const [notes, setNotes] = useState([]);
-    
+    const [notes, setNotes] = useState([]);    
 
     const handleCreateNote = async (note) =>{
         const response = await axios.post("http://localhost:3002/notes", {
@@ -18,7 +17,6 @@ const NoteProvider = ({children}) =>{
         });
         const updateNote = [...notes, response.data];
         setNotes(updateNote);
-        console.log(updateNote);
     }
 
     const handleEditNote = async (newNote, id) =>{

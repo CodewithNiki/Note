@@ -1,3 +1,12 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "note": "hello there, what are you up to?\n",
+      "id": 1
+    },
+    {
+      "note": "how are you",
+      "id": 2
+    }
+  ]
 }
